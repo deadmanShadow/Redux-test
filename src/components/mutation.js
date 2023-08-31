@@ -1,3 +1,5 @@
+import produce from "immer"
+
 let demonSlayer = [
     'Tanjiro',
     'Rengoku',
@@ -13,4 +15,8 @@ let demonSlayer = [
 
 // const hashiras = ['Zenetsu', 'Inoske' ...demonSlayer];
 
-console.log(demonSlayer);
+// console.log(demonSlayer);
+
+const nextState = produce(demonSlayer, (draft) => {
+    draft.push('Zenetsu');
+});
